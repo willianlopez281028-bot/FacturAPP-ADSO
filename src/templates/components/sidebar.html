@@ -1,0 +1,28 @@
+<aside class="sidebar" id="appSidebar">
+  <a class="brand" href="{{ url_for('home.dashboard') }}">
+    <span class="brand-mark"><i class="bi bi-receipt-cutoff"></i></span>
+    <span class="brand-copy"><strong>FactureAPP</strong><small>Gestión inteligente</small></span>
+  </a>
+  <div class="sidebar-scroll">
+    <div class="nav-caption">GENERAL</div>
+    <a class="side-link {% if active_page == 'dashboard' %}active{% endif %}" href="{{ url_for('home.dashboard') }}">
+      <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+    </a>
+    <div class="nav-caption mt-4">GESTIÓN COMERCIAL</div>
+    <a class="side-link {% if active_page == 'products' %}active{% endif %}" href="{{ url_for('products.list_products') }}"><i class="bi bi-box-seam"></i><span>Productos</span></a>
+    <a class="side-link {% if active_page == 'categories' %}active{% endif %}" href="{{ url_for('categories.list_categories') }}"><i class="bi bi-tags"></i><span>Categorías</span></a>
+    <a class="side-link {% if active_page == 'invoices' %}active{% endif %}" href="{{ url_for('invoices.list_invoices') }}"><i class="bi bi-receipt"></i><span>Facturación</span></a>
+    <a class="side-link" href="{{ url_for('invoices.new_invoice') }}"><i class="bi bi-cart-plus"></i><span>Registrar venta</span></a>
+    <a class="side-link {% if active_page == 'customers' %}active{% endif %}" href="{{ url_for('clients.list_clients') }}"><i class="bi bi-people"></i><span>Clientes</span></a>
+    <a class="side-link {% if active_page == 'suppliers' %}active{% endif %}" href="{{ url_for('suppliers.list_suppliers') }}"><i class="bi bi-truck"></i><span>Proveedores</span></a>
+    <div class="nav-caption mt-4">ADMINISTRACIÓN</div>
+    <a class="side-link {% if active_page == 'purchases' %}active{% endif %}" href="{{ url_for('purchases.list_purchases') }}"><i class="bi bi-bag-check"></i><span>Compras</span></a>
+    <a class="side-link {% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory.inventory_overview') }}"><i class="bi bi-boxes"></i><span>Inventario</span></a>
+    <a class="side-link {% if active_page == 'accounting' %}active{% endif %}" href="{{ url_for('accounting.accounting_overview') }}"><i class="bi bi-wallet2"></i><span>Finanzas y contabilidad</span></a>
+    <a class="side-link {% if active_page == 'users' %}active{% endif %}" href="{{ url_for('users.list_users') }}"><i class="bi bi-person-gear"></i><span>Usuarios</span></a>
+  </div>
+  <div class="sidebar-bottom">
+    <div class="sidebar-help"><span class="help-icon"><i class="bi bi-lightbulb"></i></span><div><strong>¿Necesitas ayuda?</strong><small>Consulta la guía del sistema</small></div></div>
+    <div class="sidebar-user"><span class="avatar">WA</span><div class="user-meta"><strong>Administrador</strong><small>Sesión de demostración</small></div><i class="bi bi-three-dots"></i></div>
+  </div>
+</aside>

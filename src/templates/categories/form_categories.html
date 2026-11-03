@@ -1,0 +1,15 @@
+
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>New Category</h1>
+      <form>
+        <div class="mb-3">
+          <label for="category" class="form-label">Category</label>
+          <input type="text" class="form-control" id="category" aria-describedby="categoryHelp">
+          <div id="categoryHelp" class="form-text">Write the cateogry name.</div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+{% endblock %}
